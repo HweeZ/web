@@ -85,36 +85,40 @@
 <body>
     <div class="container">
         <img src="Mulah.png" alt="MULAH Logo" class="logo">
-        <div class="thankyou">Thank You Register in Mulah!</div>
-        <div class="detail">Here is your details</div>
+        <div class="thankyou">Thank You Registering with Mulah!</div>
+        <div class="detail">Here are your details:</div>
         <div id="container">
             <label>
-                <p>Phone Number:<id="mobileInput"> </p>
-                <p>Name: <id="name"></p>
-                <p>Email: <id="emailInput"></p>
-                <p>Birthday: <id="birthday"></p>
+                <p>Phone Number: <span id="mobileInput"></span></p>
+                <p>Name: <span id="nameInput"></span></p>
+                <p>Email: <span id="emailInput"></span></p>
+                <p>Birthday: <span id="birthday"></span></p>
             </label>
         </div>
         <div class="footer">Powered by <a href="https://MulahRewards.com">MulahRewards.com</a></div>
     </div>
     <script>
-function getQueryParameters() {
-    const queryString = window.location.href = index.html & window.location.href = "page2.html"
-    const urlParams = new URLSearchParams(queryString);
-    return urlParams;
-}
+        function getQueryParameters() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return urlParams;
+        }
 
-const queryParams = getQueryParameters();
-const mobileInput = queryParms.get("mobileInput");    
-const nameInput = queryParams.get("nameInput");
-const birthday = queryParams.get("birthday");    
-const emailInput = queryParams.get("emailInput");
+        const queryParams = getQueryParameters();
+        const mobileInput = queryParams.get("mobileInput");
+        const nameInput = queryParams.get("nameInput");
+        const birthday = queryParams.get("birthday");
+        const emailInput = queryParams.get("emailInput");
 
-console.log("MobileInput:", mobileInput);
-console.log("nameInput:", mameInput);
-console.log("Birthday:", birthday);
-console.log("emailInput:", emailInput);
-        
+        document.getElementById("mobileInput").textContent = mobileInput;
+        document.getElementById("nameInput").textContent = nameInput;
+        document.getElementById("emailInput").textContent = emailInput;
+        document.getElementById("birthday").textContent = birthday;
+
+        console.log("MobileInput:", mobileInput);
+        console.log("NameInput:", nameInput);
+        console.log("Birthday:", birthday);
+        console.log("EmailInput:", emailInput);
     </script>
 </body>
 
