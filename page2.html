@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULAH Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: grey;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: block;
+            width: 100px;
+            margin: 0 auto 20px;
+        }
+
+        .title{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 26px;
+            text-align: left;
+        }
+
+        .description {
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .input-section,
+        .date-section {
+            margin-bottom: 20px;
+        }
+
+        .date-section input {
+            width: calc(33% - 8px);
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .continue-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #FF5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="Mulah.png" alt="MULAH Logo" class="logo">
+        <div class="title">Registration</div>
+        <div class="description">Please fill up your details.</div>
+
+        <div class="input-section">
+            <p>Name</p>
+            <input type="text" placeholder="Enter Name" id="nameInput">
+            <span class="error" id="nameError">*Please insert a name.</span>
+        </div>
+
+        <div class="date-section">
+            <p>Birthday</p>
+            <input type="number" placeholder="DD" id="day" maxlength="2">
+            <input type="number" placeholder="MM" id="month" maxlength="2">
+            <input type="number" placeholder="YYYY" id="year" maxlength="4">
+            <span class="error" id="dateError">*Please insert your birthday.</span>
+        </div>
+
+        <div class="input-section">
+            <p>Email</p>
+            <input type="email" placeholder="Email Address" id="emailInput">
+            <span class="error" id="emailError">*Please insert a valid email address.</span>          
+            <input type="checkbox" id="disableCheckbox" onclick="toggleEmailInput()"> No email address </input>
+        </div>
+
+        <button class="continue-button" onclick="validate()">Continue</button>
+        <div class="footer">Powered by <a href="https://MulahRewards.com">MulahRewards.com</a></div>
+    </div>
+    <script>
+        function toggleEmailInput() {
+            const emailInput = document.getElementById('emailInput');
+            const checkbox = document.getElementById('disableCheckbox');   
+            emailInput.disabled = checkbox.checked;
+        }
+        function validate() {
+            window.location.href = "page3.html";
+        }
+    </script>
+</body>
+
+</html>
