@@ -98,7 +98,23 @@
         <div class="footer">Powered by <a href="https://MulahRewards.com">MulahRewards.com</a></div>
     </div>
     <script>
+function getQueryParameters() {
+    const queryString = window.location.href = index.html & window.location.href = "page2.html"
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams;
+}
 
+const queryParams = getQueryParameters();
+const mobileInput = queryParms.get("mobileInput");    
+const nameInput = queryParams.get("nameInput");
+const birthday = queryParams.get("birthday");    
+const emailInput = queryParams.get("emailInput");
+
+console.log("MobileInput:", mobileInput);
+console.log("nameInput:", mameInput);
+console.log("Birthday:", birthday);
+console.log("emailInput:", emailInput);
+        
     </script>
 </body>
 
